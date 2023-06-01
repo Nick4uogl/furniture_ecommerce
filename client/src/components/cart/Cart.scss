@@ -1,0 +1,131 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.cart-page {
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 104, 50);
+    &__container {
+        max-width: 545px;
+        margin: 0 auto;
+        padding: 0px 15px;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        @include adaptiveValue("font-size", 36, 24);
+        line-height: rem(42);
+        text-align: center;
+        @include adaptiveValue("margin-bottom", 60, 30);
+    }
+
+    &__loading {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    &__error {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        display: flex;
+        gap: 38px;
+        @media (max-width: em(500)) {
+            gap: 10px;
+        }
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
+        &-image {
+            flex: 0 1 200px;
+            height: 170px;
+            img {
+                max-width: 100%;
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    &__item-right {
+        padding: 10px 0px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__item-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__item-btns {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item-btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #526760;
+    }
+
+    &__item-count {
+        border-right: none;
+        border-left: none;
+    }
+
+    &__item-btn-minus {
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    &__item-btn-plus {
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    &__button {
+        display: inline-block;
+        background: #6eeb83;
+        border-radius: 5px;
+        padding: 13px 35px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        color: #ffffff;
+        margin-top: 70px;
+        transition: background 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #4abb5d;
+            }
+        }
+    }
+}
+
+.text-semibold {
+    font-weight: 600;
+    line-height: rem(21);
+}
+
+.no-products {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}

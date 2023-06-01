@@ -1,0 +1,28 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.about-page {
+    @include adaptiveValue("padding-bottom", 93, 40);
+    @include adaptiveValue("padding-top", 38, 30);
+
+    &__container {
+        padding: 0px 10px;
+        max-width: 1060px;
+        margin: 0 auto;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        p {
+            margin-top: 38px;
+            font-weight: 600;
+            font-size: rem(20);
+            line-height: rem(23);
+            text-align: justify;
+        }
+    }
+}

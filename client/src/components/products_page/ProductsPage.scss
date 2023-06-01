@@ -1,0 +1,97 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.products-page {
+    @include adaptiveValue("padding-top", 65, 30);
+    @include adaptiveValue("padding-bottom", 115, 40);
+    &__container {
+        max-width: 1050px;
+        padding: 0px 15px;
+        margin: 0 auto;
+    }
+
+    &__slide {
+        width: auto;
+    }
+
+    &__error {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    &__loading {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    &__filter-item {
+        width: 191px;
+        padding: 6px 0px;
+        text-align: center;
+        font-weight: 600;
+        font-size: rem(20);
+        line-height: rem(23);
+        color: #ffffff;
+        background: #495867;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background: #3b444e;
+            }
+        }
+    }
+
+    &__filter {
+        margin-bottom: 80px;
+        @include adaptiveValue("margin-bottom", 80, 50);
+    }
+
+    &__navigation {
+        @include adaptiveValue("margin-top", 70, 30);
+        display: flex;
+        gap: 17px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__navigation-item {
+        display: inline-block;
+        font-weight: 600;
+        font-size: rem(20);
+        line-height: rem(23);
+        background: rgba(240, 221, 221, 0.7);
+        border-radius: 10px;
+        padding: 11px 15px;
+        transition: background 0.3s ease;
+        cursor: pointer;
+        @media (any-hover: hover) {
+            &:hover {
+                background: rgba(225, 179, 179, 0.7);
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            padding: 8px 11px;
+        }
+    }
+
+    &__navigation-next,
+    &__navigation-prev {
+        cursor: pointer;
+    }
+
+    &__navigation-prev {
+        margin-right: 2px;
+    }
+
+    &__navigation-prev {
+        margin-left: 2px;
+    }
+
+    &__navigation-active {
+        background: rgba(225, 179, 179, 0.7);
+    }
+}

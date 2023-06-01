@@ -1,0 +1,19 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.products-list {
+    @include gridCards(fit, 280px, 1fr, 42px);
+    @include adaptiveValue("row-gap", 64, 35);
+    @include adaptiveValue("column-gap", 42, 30);
+}
+
+.no-products {
+    font-weight: 600;
+    font-size: 36px;
+    @include adaptiveValue("font-size", 32, 20);
+    line-height: rem(42);
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #526760;
+}

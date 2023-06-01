@@ -1,0 +1,10 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  padding-top: 80px;
+  flex: 1 1 auto;
+}

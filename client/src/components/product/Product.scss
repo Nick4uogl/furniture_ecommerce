@@ -1,0 +1,154 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.product {
+    background: rgba(247, 244, 243, 0.7);
+    padding: 0px 18px 28px 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .product__overlay {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        top: -18px;
+        max-width: 100%;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        flex: 1 1 auto;
+    }
+
+    &__title {
+        margin-top: 22px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: rem(24);
+        text-align: left;
+        @media (max-width: $mobileSmall) {
+            margin-top: 5px;
+        }
+    }
+
+    &__label {
+        font-size: rem(20);
+        margin-bottom: 20px;
+        text-align: start;
+        &.no-discount {
+            margin-top: 20px;
+        }
+        @media (hover: none) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__price {
+        font-weight: 700;
+        font-size: rem(24);
+        text-align: right;
+        @media (hover: hover) {
+            margin-top: auto;
+        }
+        @media (hover: none) {
+            display: none;
+        }
+
+        &-nohover {
+            display: none;
+            @media (hover: none) {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__overlay {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        position: absolute;
+        top: -18px;
+        left: 0;
+        background: rgba(77, 67, 67, 0.5);
+        width: 100%;
+        height: calc(100% + 18px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0px 40px;
+    }
+
+    &__add {
+        font-size: rem(20);
+        line-height: rem(29);
+        color: #f0544f;
+        padding: 15px 0px;
+        border: 2px solid #f0544f;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-align: center;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #f0544f;
+                color: #fff;
+            }
+        }
+
+        &-nohover {
+            display: none;
+            @media (hover: none) {
+                display: inline-block;
+                background-color: #f0544f;
+                color: #fff;
+            }
+        }
+    }
+
+    &__info {
+        font-size: rem(20);
+        line-height: rem(29);
+        color: #6eeb83;
+        padding: 15px 0px;
+        text-align: center;
+        width: 100%;
+        border: 2px solid #6eeb83;
+
+        transition: all 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #6eeb83;
+                color: #fff;
+            }
+        }
+
+        &-nohover {
+            display: none;
+            @media (hover: none) {
+                display: inline-block;
+                background-color: #6eeb83;
+                color: #fff;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.flying-image {
+    position: fixed;
+    z-index: 3000;
+    top: -10;
+    left: 20;
+
+    transition: all 1s ease;
+}

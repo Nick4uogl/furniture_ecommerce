@@ -1,0 +1,61 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.products {
+    padding: 29px 0px 0px 0px;
+    @include adaptiveValue("padding-bottom", 106, 40);
+    text-align: center;
+
+    &__container {
+        max-width: 1050px;
+        padding: 0px 15px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-family: "Inter";
+        font-weight: 700;
+        @include adaptiveValue("font-size", 36, 24);
+        line-height: rem(50);
+        letter-spacing: 0.07em;
+        margin-bottom: 47px;
+        text-align: center;
+    }
+
+    &__list {
+        @include gridCards(fit, 280px, 1fr, 42px);
+        @include adaptiveValue("row-gap", 64, 35);
+        @include adaptiveValue("column-gap", 42, 30);
+    }
+
+    &__load-more {
+        font-size: rem(20);
+        line-height: rem(23);
+        color: #f0544f;
+        border: 2px solid #f0544f;
+        padding: 19px 0px;
+        text-align: center;
+        display: inline-block;
+        min-width: 283px;
+        margin-top: 63px;
+        transition: all 0.3s ease;
+        @media (hover: none) {
+            background-color: #f0544f;
+            color: #fff;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #f0544f;
+                color: #fff;
+            }
+        }
+    }
+
+    &__error {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        margin: 100px 0px;
+    }
+}

@@ -1,0 +1,111 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss";
+
+.product-page {
+    @include adaptiveValue("padding-top", 107, 30);
+    &__container {
+        max-width: 1050px;
+        padding: 0px 15px;
+        margin: 0 auto;
+        display: flex;
+        gap: 46px;
+        @include adaptiveValue("gap", 46, 20);
+        padding-bottom: 50px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        position: relative;
+
+        @media (min-width: $mobile) {
+            flex: 0 1 600px;
+        }
+        img {
+            border-radius: 5px;
+            max-width: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__loading {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    &__error {
+        font-size: 24px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    &__right {
+        flex: 1 1 auto;
+    }
+
+    &__product-name {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-weight: 600;
+        @include adaptiveValue("font-size", 32, 20);
+        line-height: rem(38);
+        color: #ffffff;
+    }
+
+    &__title {
+        font-weight: 600;
+        @include adaptiveValue("font-size", 32, 24);
+        line-height: rem(24);
+        margin-bottom: rem(28);
+    }
+
+    &__table {
+        display: flex;
+        gap: 7px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 50%;
+    }
+
+    &__price {
+        margin-top: 37px;
+        @include adaptiveValue("margin-top", 37, 15);
+        font-weight: 600;
+        @include adaptiveValue("font-size", 40, 24);
+        line-height: rem(47);
+        color: #f0544f;
+    }
+}
+
+.add-to-cart {
+    @include adaptiveValue("margin-top", 31, 15);
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: rem(21);
+    color: #ffffff;
+    padding: 10px 0px;
+    width: 100%;
+    background: #6eeb83;
+    transition: background 0.3s ease;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background: #2bc445;
+        }
+    }
+}
+
+.column-item {
+    border-radius: 2px;
+    height: 33px;
+    padding: 8px 0px 8px 18px;
+    &:nth-child(odd) {
+        background: #f9f5f5;
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/furniture/static/css/main.fd7a3eb5.css",
+    "main.js": "/furniture/static/js/main.7e964d04.js",
+    "static/media/map.jpg": "/furniture/static/media/map.a36ebf8c0675332d5b9f.jpg",
+    "static/media/advantagesImg.jpg": "/furniture/static/media/advantagesImg.3f328f5e8a047f4c3ab6.jpg",
+    "static/media/phone.svg": "/furniture/static/media/phone.7024255bc7b531108726c40a4d0c0173.svg",
+    "static/media/instagram.svg": "/furniture/static/media/instagram.d012fe1ab224de144fcfc38080112162.svg",
+    "static/media/plus.svg": "/furniture/static/media/plus.7294098e04b5e86175c9d36cd35c5f5d.svg",
+    "static/media/basket.svg": "/furniture/static/media/basket.9a73ac37a7549b9020e16f8213fb266f.svg",
+    "static/media/checked.svg": "/furniture/static/media/checked.350c57ee2cf63cb44609.svg",
+    "static/media/minus.svg": "/furniture/static/media/minus.b196318d5565c0d019f25d74965ce22d.svg",
+    "static/media/delete.svg": "/furniture/static/media/delete.87b5e77f847219ababe5c3acc7db4ff5.svg",
+    "static/media/telegram.svg": "/furniture/static/media/telegram.428705127619f015438ab4c96875cfea.svg",
+    "index.html": "/furniture/index.html",
+    "static/media/facebook.svg": "/furniture/static/media/facebook.0812bb2027fce6cfbf62787e9f8e52a7.svg",
+    "main.fd7a3eb5.css.map": "/furniture/static/css/main.fd7a3eb5.css.map",
+    "main.7e964d04.js.map": "/furniture/static/js/main.7e964d04.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd7a3eb5.css",
+    "static/js/main.7e964d04.js"
+  ]
+}
